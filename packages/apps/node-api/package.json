@@ -1,0 +1,39 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "darkvadr <edjonorh@gmail.com>",
+  "homepage": "https://github.com/Eddyflawless/nerd-central#readme",
+  "license": "ISC",
+  "main": "lib/node-api.js",
+  "typings": "lib/node-api.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eddyflawless/nerd-central.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/node-api.test.js",
+    "tsc": "tsc",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint . --ignore-path ../../../.eslintignore --ext ts --ext tsx --ext js --ext jsx",
+    "lint:fix": "eslint --fix . --ignore-path ../../../.eslintignore --ext ts --ext tsx --ext js --ext jsx",
+    "eslint:fix": "eslint --fix",
+    "start": "ts-node src/index.ts",
+    "start:watch": "tsc -p tsconfig.json -w",
+    "start:dev": "nodemon src/index.ts"
+  },
+  "bugs": {
+    "url": "https://github.com/Eddyflawless/nerd-central/issues"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

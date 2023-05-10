@@ -1,0 +1,79 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "simple-import-sort"
+  ],
+  "extends": [
+    "airbnb-base",
+    "prettier",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+     // list of compat rules:
+    // these rule exceptions has been added for compatibility with the current state of the codebase.
+    // little by little these rules should be negated and codes related to this rule needs to change/refactored.
+    // but for the scope of what we're doing here we can't afford refactor on 30+ project in 1 week.
+    "max-classes-per-file": "off",
+    "no-magic-numbers": "off",
+    "no-param-reassign": "off",
+    "no-restricted-syntax": "off",
+    "import/no-cycle": "off",
+    "no-await-in-loop": "off",
+    /// ============= end of compat rules ==============
+
+    "default-case": "off",
+    "consistent-return": "off",
+    "no-useless-escape": "off",
+    "linebreak-style": [2, "unix"],
+    "no-constant-condition": 2,
+    "no-continue": "off",
+    "quotes": [2, "double", { "avoidEscape": true }],
+    "guard-for-in": 0,
+    "prefer-const": 2,
+    "eol-last": 2,
+    "comma-dangle": 0,
+    "curly": 2,
+    "no-nested-ternary": 2,
+    "no-trailing-spaces": 2,
+    "one-var": [2, "never"],
+    "no-underscore-dangle": 0,
+    "no-plusplus": 0,
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": "off",
+    "@typescript-eslint/explicit-function-return-type": 2,
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": 2,
+    "@typescript-eslint/no-submodule-imports": "off",
+    "@typescript-eslint/no-unused-expressions": "warn",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/jsx-no-lambda": "off",
+    "@typescript-eslint/prefer-interface": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/quotes": 0,
+    "@typescript-eslint/indent": [2, 2]
+    //"no-console": "off",
+    // "simple-import-sort/sort": "warn",
+    // "sort-keys": "off",
+    // "sort-imports": "off"
+  },
+  "env": {
+    "browser": false,
+    "es6": true,
+    "node": true
+  }
+}

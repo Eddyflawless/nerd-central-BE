@@ -1,0 +1,17 @@
+{
+    "extends": "../../../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./lib"
+    },
+    "exclude": [
+        "../../../node_modules",
+        "node_modules",
+        "build"
+    ],
+    "include": [
+        "./src",
+        "global.d.ts",
+        "thirdparty.d.ts",
+        ".eslintrc.json"
+    ]
+}
